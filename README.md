@@ -40,7 +40,6 @@ The goal of this repository is to build strong problem-solving skills and prepar
 ## 💻 Languages
 
 * Python
-* Java
 
 ## 🚀 Practice Approach
 
