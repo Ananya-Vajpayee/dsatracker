@@ -13,5 +13,5 @@ if __name__ == "__main__":
     # Array 1
     arr1 = [2, 5, 1, 3, 0]
     n = len(arr1)  # Size of the array
-    max = findLargestElement(arr1, n)  # Call the function to find the largest element
+    max = findLargestElement(arr1, n)  
     print("The largest element in the array is:", max)  # Output the result
