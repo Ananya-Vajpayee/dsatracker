@@ -1,37 +1,30 @@
-class Solution:
-    # Function to sort the array using insertion sort
-    def insertionSort(self, nums):
-        n = len(nums) # Size of the array 
-        
-        # For every element in the array 
-        for i in range(1, n):
-            key = nums[i] # Current element as key 
-            j = i - 1
-            
-            # Shift elements that are greater than key by one position
-            while j >= 0 and nums[j] > key:
-                nums[j + 1] = nums[j]
-                j -= 1
-            
-            nums[j + 1] = key # Insert key at correct position
-        
-        return nums
+def insertion_sort(arr):
+    """
+    Sorts an array using the Insertion Sort algorithm.
+    Approach: Build the sorted array one element at a time.
+    """
+    n = len(arr)
+
+    # Start from the second element (index 1); index 0 is
+    # trivially "sorted" on its own
+    for i in range(1, n):
+        key = arr[i]        # the element we're currently placing
+        j = i - 1            # start comparing with the element just before it
+
+        # Shift elements of the sorted part that are greater than 'key'
+        # one position to the right, to make room for 'key'
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+
+        # Place 'key' in its correct position
+        arr[j + 1] = key
+
+    return arr
+
 
 if __name__ == "__main__":
-    # Create an instance of solution class
-    solution = Solution()
-    
-    nums = [13, 46, 24, 52, 20, 9]
-    
-    print("Before Using Insertion Sort:")
-    for num in nums:
-        print(num, end=" ")
-    print()
-    
-    # Function call for insertion sort
-    nums = solution.insertionSort(nums)
-    
-    print("After Using Insertion Sort:")
-    for num in nums:
-        print(num, end=" ")
-    print()
+    arr = [13, 46, 24, 52, 20, 9]
+    print("Before sorting:", arr)
+    sorted_arr = insertion_sort(arr)
+    print("After sorting: ", sorted_arr)
