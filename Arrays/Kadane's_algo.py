@@ -26,3 +26,6 @@ if __name__ == "__main__":
 
     # Print the max subarray sum
     print(f"The maximum subarray sum is: {maxSum}")
+
+    #Complexity Analysis:
+    # Time Complexity: O(n), where n is the number of elements in the input array
